@@ -9,4 +9,6 @@ router.get('/', (req, res) => {
 
 router.use('/anime', require('./anime'));
 
+router.use('/profiles', require('./profiles'));
+
 module.exports = router;

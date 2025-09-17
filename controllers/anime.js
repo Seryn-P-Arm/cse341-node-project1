@@ -1,7 +1,7 @@
 const mongodb = require('../data/database');
 const ObjectId = require('mongodb').ObjectId;
 
-const getAll = async (req, res) => {
+const getAllAnime = async (req, res) => {
     //#swagger.tags=['Anime']
     const result = await mongodb.getDatabase().db().collection('anime').find();
     result.toArray().then((anime) => {
@@ -10,7 +10,7 @@ const getAll = async (req, res) => {
     });
 };
 
-const getSingle = async (req, res) => {
+const getSingleAnime = async (req, res) => {
     //#swagger.tags=['Anime']
     const animeId = new ObjectId(req.params.id);
     const result = await mongodb.getDatabase().db().collection('anime').find({ _id: animeId });
@@ -71,8 +71,8 @@ const deleteAnime = async (req, res) => {
 };
 
 module.exports = {
-    getAll,
-    getSingle,
+    getAllAnime,
+    getSingleAnime,
     createAnime,
     updateAnime,
     deleteAnime

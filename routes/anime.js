@@ -3,9 +3,9 @@ const router = express.Router();
 
 const animeController = require('../controllers/anime');
 
-router.get('/', animeController.getAll);
+router.get('/', animeController.getAllAnime);
 
-router.get('/:id', animeController.getSingle);
+router.get('/:id', animeController.getSingleAnime);
 
 router.post('/', animeController.createAnime);
 

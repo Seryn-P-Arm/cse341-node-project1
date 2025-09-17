@@ -1,11 +1,12 @@
 // LOCALHOST
-### Get all contacts
+
+### Get all anime
 GET http://localhost:3000/anime
 
-### Get contact by id
-GET http://localhost:3000/anime/68c97f7634ff7761a21f6e8d
+### Get anime by id
+GET http://localhost:3000/anime/68c97ded34ff7761a21f6e8c
 
-### Create contact
+### Create anime
 POST http://localhost:3000/anime HTTP/1.1
 content-type: application/json
 
@@ -19,7 +20,7 @@ content-type: application/json
     "streamingPlatform": "Crunchyroll"
 }
 
-### PUT contact
+### Update anime
 PUT http://localhost:3000/anime/68c984ba34ff7761a21f6e92 HTTP/1.1
 content-type: application/json
 
@@ -33,5 +34,48 @@ content-type: application/json
     "streamingPlatform": "Crunchyroll"
 }
 
-### DELETE contact
+### Delete anime
 DELETE http://localhost:3000/anime/68c9a3ceab0d43a7b66bfe00
+
+
+
+### Get all profiles
+GET http://localhost:3000/profiles
+
+### Get profile by id
+GET http://localhost:3000/profiles/68c97a5034ff7761a21f6e86
+
+### Create profile
+POST http://localhost:3000/profiles HTTP/1.1
+content-type: application/json
+
+{
+    "username": "BobTest",
+    "email": "bobbytest@gmail.com",
+    "favGenre": "Comedy",
+    "watchlist": []
+}
+
+### Add anime to profile watchlist
+POST http://localhost:3000/profiles/68cb2b2bf853f288bb29601e/watchlist HTTP/1.1
+content-type: application/json
+
+{
+    "animeId": "68c97f7634ff7761a21f6e8d"
+}
+
+### Remove anime from profile watchlist
+DELETE http://localhost:3000/profiles/68cb2b2bf853f288bb29601e/watchlist/68c97f7634ff7761a21f6e8d
+
+### Update profile
+PUT http://localhost:3000/profiles/68cb2b2bf853f288bb29601e HTTP/1.1
+content-type: application/json
+
+{
+    "username": "BobTest",
+    "email": "bobbytest@gmail.com",
+    "favGenre": "Dark Fantasy"
+}
+
+### Delete profile
+DELETE http://localhost:3000/profiles/68cb2b2bf853f288bb29601e

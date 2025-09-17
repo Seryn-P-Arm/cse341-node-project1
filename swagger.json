@@ -5,9 +5,10 @@
     "description": "Anime Api",
     "version": "1.0.0"
   },
-  "host": "cse341-node-project1-ids2.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
+    "http",
     "https"
   ],
   "paths": {
