@@ -31,11 +31,11 @@ content-type: application/json
     "episodes": "26",
     "rating": "4.8",
     "releaseYear": "2019",
-    "streamingPlatform": "Crunchyroll"
+    "streamingPlatform": "Netflix"
 }
 
 ### Delete anime
-DELETE http://localhost:3000/anime/68c9a3ceab0d43a7b66bfe00
+DELETE http://localhost:3000/anime/68ce70ab742ae87b889a72c2
 
 
 
@@ -57,7 +57,7 @@ content-type: application/json
 }
 
 ### Add anime to profile watchlist
-POST http://localhost:3000/profiles/68cb2b2bf853f288bb29601e/watchlist HTTP/1.1
+POST http://localhost:3000/profiles/68ce711e742ae87b889a72c3/watchlist HTTP/1.1
 content-type: application/json
 
 {
@@ -65,10 +65,10 @@ content-type: application/json
 }
 
 ### Remove anime from profile watchlist
-DELETE http://localhost:3000/profiles/68cb2b2bf853f288bb29601e/watchlist/68c97f7634ff7761a21f6e8d
+DELETE http://localhost:3000/profiles/68ce711e742ae87b889a72c3/watchlist/68c97f7634ff7761a21f6e8d
 
 ### Update profile
-PUT http://localhost:3000/profiles/68cb2b2bf853f288bb29601e HTTP/1.1
+PUT http://localhost:3000/profiles/68ce711e742ae87b889a72c3 HTTP/1.1
 content-type: application/json
 
 {
@@ -78,4 +78,4 @@ content-type: application/json
 }
 
 ### Delete profile
-DELETE http://localhost:3000/profiles/68cb2b2bf853f288bb29601e
+DELETE http://localhost:3000/profiles/68ce711e742ae87b889a72c3
