@@ -270,6 +270,9 @@
         }
       },
       "put": {
+        "tags": [
+          "Profiles"
+        ],
         "description": "",
         "parameters": [
           {
