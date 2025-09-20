@@ -37,6 +37,7 @@ const createProfile = async (req, res) => {
 };
 
 const updateProfile = async (req, res) => {
+    //#swagger.tags=['Profiles']
     try {
         const profileId = new ObjectId(req.params.id);
 
