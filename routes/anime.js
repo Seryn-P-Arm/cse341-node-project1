@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const validation = require('../middleware/validate');
+const { isAuthenticated } = require('../middleware/authenticate')
 
 const animeController = require('../controllers/anime');
 
@@ -8,10 +9,10 @@ router.get('/', animeController.getAllAnime);
 
 router.get('/:id', animeController.getSingleAnime);
 
-router.post('/', validation.saveAnime, animeController.createAnime);
+router.post('/', isAuthenticated, validation.saveAnime, animeController.createAnime);
 
-router.put('/:id', validation.updateAnime, animeController.updateAnime);
+router.put('/:id', isAuthenticated, validation.updateAnime, animeController.updateAnime);
 
-router.delete('/:id', animeController.deleteAnime);
+router.delete('/:id', isAuthenticated, animeController.deleteAnime);
 
 module.exports = router;
