@@ -8,7 +8,7 @@ router.get('/', profileController.getAllProfiles);
 
 router.get('/:id', profileController.getSingleProfile);
 
-router.post('/', validation.saveProfile, profileController.createProfile);
+router.post('/', isAuthenticated, validation.saveProfile, profileController.createProfile);
 
 router.post('/:id/watchlist', isAuthenticated, profileController.addAnimeToProfileWatchlist);
 
